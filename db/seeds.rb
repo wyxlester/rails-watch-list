@@ -10,17 +10,17 @@ Bookmark.destroy_all
   new_movie = Movie.create!(
     title: Faker::Movie.title,
     overview: Faker::Movie.quote,
-    poster_url:Faker::Internet.url,
+    poster_url: Faker::Internet.url,
     rating: rand(1.0..5.0).round(1)
   )
 
   puts 'Creating list....'
   new_list = List.create!(
-    name: Faker::Music.genre
+    name: Faker::Name.name
   )
 
   puts 'Creating bookmark...'
-  new_bookmark = Bookmark.create!(
+  Bookmark.create!(
     list: new_list,
     movie: new_movie,
     comment: Faker::Lorem.sentence
