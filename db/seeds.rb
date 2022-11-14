@@ -16,7 +16,7 @@ Bookmark.destroy_all
 
   puts 'Creating list....'
   new_list = List.create!(
-    name: Faker::Name.name
+    name: Faker::Music.genre
   )
 
   puts 'Creating bookmark...'
