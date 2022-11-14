@@ -1,0 +1,10 @@
+<h1>Show selected list of movies</h1>
+<br>
+<h3>Movie List Name: <%= @list.name %></h3>
+
+<% @movies.each do |movie| %>
+  <li><%= movie.title %>     <%= link_to 'Create New Bookmark', new_bookmark_path %>
+</li>
+<% end %>
+<br>
+<%= link_to "Back to Homepage", lists_path%>
